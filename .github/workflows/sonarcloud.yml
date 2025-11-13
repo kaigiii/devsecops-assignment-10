@@ -16,3 +16,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          # 在這裡加上 args，明確告訴 scanner 組織和專案金鑰
+          args: >
+            -Dsonar.organization=kaigiii
+            -Dsonar.projectKey=kaigiii_devsecops-assignment-10
